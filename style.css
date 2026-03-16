@@ -1,0 +1,202 @@
+/* Definindo a cor de destaque da VitruvianWeb */
+:root {
+    --marrom-destaque: #996512;
+}
+
+/* Substituindo o texto que era verde */
+.text-custom {
+    color: var(--marrom-destaque) !important;
+}
+
+/* Substituindo o botão que era verde */
+.btn-custom {
+    background-color: var(--marrom-destaque) !important;
+    border-color: var(--marrom-destaque) !important;
+    color: white !important;
+}
+
+.btn-custom:hover {
+    filter: brightness(85%);
+}
+
+/* Destaque para o círculo atrás da foto */
+.bg-custom-light {
+    background-color: var(--marrom-destaque) !important;
+    opacity: 0.1;
+}
+
+:root {
+    --marrom-vweb: #996512;
+}
+
+/* Força a cor idêntica em textos e títulos */
+.text-custom, h5.fw-bold {
+    color: var(--marrom-vweb) !important;
+}
+
+/* Garante que o botão não tenha bordas de outra cor */
+.btn-custom {
+    background-color: var(--marrom-vweb) !important;
+    border: 1px solid var(--marrom-vweb) !important; 
+    box-shadow: none !important; /* Remove sombras que "sujam" a cor */
+}
+
+/* Adicione ao final do seu style.css */
+.bg-soft-marrom {
+    background-color: rgba(153, 101, 18, 0.1) !important;
+    color: #996512 !important;
+}
+
+.text-custom {
+    color: #996512 !important;
+}
+
+:root {
+    --marrom-vweb: #996512; 
+}
+
+/* Círculo do logo com o SEU marrom */
+.logo-circle-custom {
+    width: 48px;
+    height: 48px;
+    background-color: var(--marrom-vweb);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 12px;
+}
+
+/* Texto de destaque em marrom (CRP e outros) */
+.text-marrom-destaque {
+    color: var(--marrom-vweb) !important;
+}
+
+/* Botão com o SEU marrom */
+.btn-marrom-vweb {
+    background-color: var(--marrom-vweb) !important;
+    color: white !important;
+    border: none;
+}
+/* Elemento decorativo atrás da foto */
+.hero-shape {
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--marrom-vweb);
+    opacity: 0.1; /* Deixa o marrom bem clarinho ao fundo */
+    border-radius: 30px;
+    z-index: 0;
+    transform: rotate(3deg);
+}
+
+/* Estilo da foto conforme a referência */
+.hero-img-container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-img {
+    border-radius: 30px; /* Bordas arredondadas suaves como na foto */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+/* Badge de destaque */
+.badge-custom {
+    background-color: rgba(153, 101, 18, 0.1);
+    color: var(--marrom-vweb);
+    font-weight: 600;
+    border: none;
+}
+/* Container da imagem para limitar o tamanho do fundo */
+.hero-img-container {
+    position: relative;
+    display: inline-block; /* Importante para o shape não esticar */
+    z-index: 1;
+}
+
+/* O fundo decorativo marrom */
+.hero-shape {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #996512;
+    opacity: 0.15;
+    border-radius: 30px;
+    z-index: -1; /* Fica atrás da foto */
+    transform: rotate(3deg);
+}
+
+/* A foto da Esllanny */
+.hero-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 30px; /* Bordas arredondadas como na referência */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: block;
+}
+/* Diminuindo a imagem e garantindo o encaixe */
+.hero-img {
+    width: 100%;
+    max-width: 320px; /* Diminuímos de 400px para 320px */
+    height: auto;
+    border-radius: 20px; /* Bordas um pouco menos arredondadas para combinar com o tamanho */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto; /* Centraliza na coluna */
+}
+
+/* Ajustando o fundo decorativo para o novo tamanho */
+.hero-img-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px; /* Reduz espaço acima da foto */
+}
+/* Estilo do Botão Flutuante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366; /* Cor oficial do WhatsApp */
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Garante que fique por cima de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Efeito de crescer ao passar o rato */
+    background-color: #128c7e;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Ajuste para telemóveis: botão um pouco menor */
+@media screen and (max-width: 767px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
