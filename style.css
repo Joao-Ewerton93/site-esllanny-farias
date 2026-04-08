@@ -1,202 +1,403 @@
-/* Definindo a cor de destaque da VitruvianWeb */
+/* =========================================================================
+   VARIÁVEIS DE DESIGN SYSTEM (Design Pleno & Sereno)
+   ========================================================================= */
 :root {
-    --marrom-destaque: #996512;
-}
-
-/* Substituindo o texto que era verde */
-.text-custom {
-    color: var(--marrom-destaque) !important;
-}
-
-/* Substituindo o botão que era verde */
-.btn-custom {
-    background-color: var(--marrom-destaque) !important;
-    border-color: var(--marrom-destaque) !important;
-    color: white !important;
-}
-
-.btn-custom:hover {
-    filter: brightness(85%);
-}
-
-/* Destaque para o círculo atrás da foto */
-.bg-custom-light {
-    background-color: var(--marrom-destaque) !important;
-    opacity: 0.1;
-}
-
-:root {
+    /* Paleta de Cores */
     --marrom-vweb: #996512;
+    --marrom-vweb-hover: #7a500e;
+    --marrom-light: #c78d26;
+    --bg-soft-marrom: rgba(153, 101, 18, 0.06);
+
+    /* Tons Neutros & Fundos */
+    --sand-bg: #fdfbf7;
+    /* Areia sereno */
+    --white-bg: #ffffff;
+    --text-dark: #2c251d;
+    /* Quase preto, mais suave */
+    --text-muted: #6e6459;
+    /* Cinza terroso */
+
+    /* Sombras em Camadas (Manteiga/Suaves) */
+    --shadow-sm: 0 4px 12px rgba(153, 101, 18, 0.04);
+    --shadow-md: 0 12px 28px rgba(153, 101, 18, 0.08);
+    --shadow-lg: 0 20px 48px rgba(153, 101, 18, 0.12);
+
+    /* Transições */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Força a cor idêntica em textos e títulos */
-.text-custom, h5.fw-bold {
+/* =========================================================================
+   RESETS & ACESSIBILIDADE GERAL
+   ========================================================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--sand-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: var(--marrom-vweb);
+    color: var(--white-bg);
+}
+
+/* Barra de Rolagem Customizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4c4af;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--marrom-vweb);
+}
+
+/* =========================================================================
+   TIPOGRAFIA
+   ========================================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-dark);
+}
+
+p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* Gradiente Elegante para Títulos */
+.text-marrom-gradient {
+    background: linear-gradient(135deg, var(--marrom-vweb) 10%, var(--marrom-light) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Utilitários de Cor */
+.text-custom,
+.text-marrom-destaque,
+h5.fw-bold {
     color: var(--marrom-vweb) !important;
 }
 
-/* Garante que o botão não tenha bordas de outra cor */
-.btn-custom {
-    background-color: var(--marrom-vweb) !important;
-    border: 1px solid var(--marrom-vweb) !important; 
-    box-shadow: none !important; /* Remove sombras que "sujam" a cor */
+/* =========================================================================
+   FUNDOS & BORDAS (Sections)
+   ========================================================================= */
+.section-sand {
+    background-color: var(--sand-bg);
 }
 
-/* Adicione ao final do seu style.css */
+.section-white {
+    background-color: var(--white-bg);
+}
+
 .bg-soft-marrom {
-    background-color: rgba(153, 101, 18, 0.1) !important;
-    color: #996512 !important;
+    background-color: var(--bg-soft-marrom) !important;
+    color: var(--marrom-vweb) !important;
 }
 
-.text-custom {
-    color: #996512 !important;
+.badge-custom {
+    background-color: var(--bg-soft-marrom);
+    color: var(--marrom-vweb);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(153, 101, 18, 0.1);
 }
 
-:root {
-    --marrom-vweb: #996512; 
+/* =========================================================================
+   NAVBAR (Vidro Sereno)
+   ========================================================================= */
+.glass-nav {
+    background: rgba(253, 251, 247, 0.75) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(153, 101, 18, 0.05);
+    transition: var(--transition-smooth);
 }
 
-/* Círculo do logo com o SEU marrom */
 .logo-circle-custom {
     width: 48px;
     height: 48px;
-    background-color: var(--marrom-vweb);
+    background: linear-gradient(135deg, var(--marrom-vweb), var(--marrom-light));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-right: 12px;
+    color: var(--white-bg);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-right: 14px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-bounce);
 }
 
-/* Texto de destaque em marrom (CRP e outros) */
-.text-marrom-destaque {
+.navbar-brand:hover .logo-circle-custom {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-muted) !important;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.nav-link:hover {
     color: var(--marrom-vweb) !important;
 }
 
-/* Botão com o SEU marrom */
+/* =========================================================================
+   BOTÕES
+   ========================================================================= */
 .btn-marrom-vweb {
-    background-color: var(--marrom-vweb) !important;
-    color: white !important;
-    border: none;
-}
-/* Elemento decorativo atrás da foto */
-.hero-shape {
-    position: absolute;
-    top: 10%;
-    right: -5%;
-    width: 100%;
-    height: 100%;
-    background-color: var(--marrom-vweb);
-    opacity: 0.1; /* Deixa o marrom bem clarinho ao fundo */
-    border-radius: 30px;
-    z-index: 0;
-    transform: rotate(3deg);
-}
-
-/* Estilo da foto conforme a referência */
-.hero-img-container {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-img {
-    border-radius: 30px; /* Bordas arredondadas suaves como na foto */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 2;
-}
-
-/* Badge de destaque */
-.badge-custom {
-    background-color: rgba(153, 101, 18, 0.1);
-    color: var(--marrom-vweb);
+    background: linear-gradient(135deg, var(--marrom-vweb), #af7618) !important;
+    border: none !important;
+    color: var(--white-bg) !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: var(--transition-bounce);
+    padding: 0.85rem 2.5rem;
     font-weight: 600;
-    border: none;
-}
-/* Container da imagem para limitar o tamanho do fundo */
-.hero-img-container {
-    position: relative;
-    display: inline-block; /* Importante para o shape não esticar */
-    z-index: 1;
+    letter-spacing: 0.3px;
 }
 
-/* O fundo decorativo marrom */
-.hero-shape {
-    position: absolute;
-    top: 20px;
-    right: -20px;
-    width: 100%;
-    height: 100%;
-    background-color: #996512;
-    opacity: 0.15;
-    border-radius: 30px;
-    z-index: -1; /* Fica atrás da foto */
-    transform: rotate(3deg);
+.btn-marrom-vweb:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg) !important;
+    background: linear-gradient(135deg, var(--marrom-light), var(--marrom-vweb)) !important;
 }
 
-/* A foto da Esllanny */
-.hero-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 30px; /* Bordas arredondadas como na referência */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    display: block;
-}
-/* Diminuindo a imagem e garantindo o encaixe */
-.hero-img {
-    width: 100%;
-    max-width: 320px; /* Diminuímos de 400px para 320px */
-    height: auto;
-    border-radius: 20px; /* Bordas um pouco menos arredondadas para combinar com o tamanho */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    display: block;
-    margin: 0 auto; /* Centraliza na coluna */
+/* =========================================================================
+   CARDS (Flutuantes & Limpos)
+   ========================================================================= */
+.card {
+    border: 1px solid rgba(153, 101, 18, 0.04);
+    background-color: var(--white-bg);
+    border-radius: 28px;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
 }
 
-/* Ajustando o fundo decorativo para o novo tamanho */
-.hero-img-container {
-    position: relative;
-    display: inline-block;
-    margin-top: 10px; /* Reduz espaço acima da foto */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(153, 101, 18, 0.1);
 }
-/* Estilo do Botão Flutuante */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366; /* Cor oficial do WhatsApp */
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Garante que fique por cima de tudo */
+
+.icon-highlight {
+    font-size: 2.2rem;
+    color: var(--marrom-vweb);
+    background: var(--bg-soft-marrom);
+    width: 85px;
+    height: 85px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    border-radius: 24px;
+    margin: 0 auto;
+    transition: var(--transition-bounce);
+}
+
+.card:hover .icon-highlight {
+    transform: scale(1.08) translateY(-5px);
+    background: linear-gradient(135deg, var(--marrom-vweb), var(--marrom-light));
+    color: var(--white-bg);
+    box-shadow: var(--shadow-md);
+}
+
+/* =========================================================================
+   SEÇÃO HERO (Hero Section)
+   ========================================================================= */
+.hero-img-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 1.5rem;
+    z-index: 1;
+}
+
+.hero-shape {
+    position: absolute;
+    top: -8%;
+    right: -8%;
+    width: 116%;
+    height: 116%;
+    background: linear-gradient(135deg, var(--marrom-vweb), var(--marrom-light));
+    opacity: 0.1;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: -1;
+    animation: morphing 10s ease-in-out infinite alternate;
+}
+
+@keyframes morphing {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        border-radius: 50% 50% 30% 70% / 70% 30% 70% 30%;
+        transform: rotate(2deg) scale(1.02);
+    }
+
+    100% {
+        border-radius: 70% 30% 50% 50% / 30% 70% 30% 70%;
+        transform: rotate(-2deg) scale(0.98);
+    }
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    /* Formato orgânico refinado */
+    border-radius: 30% 70% 64% 36% / 46% 36% 64% 54%;
+    box-shadow: var(--shadow-lg);
+    display: block;
+    margin: 0 auto;
+    transition: var(--transition-smooth);
+}
+
+.hero-img:hover {
+    transform: scale(1.03) rotate(1deg);
+    border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+}
+
+/* =========================================================================
+   LINHA DO TEMPO (Formação)
+   ========================================================================= */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px dashed rgba(153, 101, 18, 0.2);
+    margin-bottom: 2.5rem;
+    transition: var(--transition-smooth);
+}
+
+.timeline-item:hover {
+    border-left-color: var(--marrom-vweb);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--white-bg);
+    border: 3px solid var(--marrom-vweb);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(153, 101, 18, 0.1);
+    transition: var(--transition-bounce);
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.3);
+    background-color: var(--marrom-vweb);
+    box-shadow: 0 0 0 6px rgba(153, 101, 18, 0.15);
+}
+
+/* =========================================================================
+   WHATSAPP FLOAT BOTÃO
+   ========================================================================= */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 40px;
+    right: 40px;
+    background: linear-gradient(135deg, #25D366, #1EBE5A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+    z-index: 9999;
+    transition: var(--transition-bounce);
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1); /* Efeito de crescer ao passar o rato */
-    background-color: #128c7e;
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 15px 32px rgba(37, 211, 102, 0.45);
+}
+
+/* Pulso do WhatsApp */
+.whatsapp-float::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25D366;
+    z-index: -1;
+    opacity: 0.6;
+    animation: pulse-wpp 2s infinite;
+}
+
+@keyframes pulse-wpp {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
 }
 
 .whatsapp-float img {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-/* Ajuste para telemóveis: botão um pouco menor */
-@media screen and (max-width: 767px) {
+/* =========================================================================
+   RESPONSIVIDADE
+   ========================================================================= */
+@media screen and (max-width: 768px) {
     .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
+        width: 55px;
+        height: 55px;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .whatsapp-float img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero-img {
+        max-width: 290px;
+    }
+
+    h1.display-3 {
+        font-size: 2.8rem;
     }
 }
