@@ -5,13 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Esllanny Farias - Psicóloga Clínica (CRP 06/209440). Atendimento infantil, Ciência ABA e Orientação Parental. Agende sua consulta!">
-    <title>Esllanny Farias | Psicóloga Clínica</title>
+        content="Esllanny Farias - Psicóloga Infantil (CRP 06/209440). Um espaço seguro para crescer, sentir e florescer. Atendimento presencial em Praia Grande/SP e Orientação Parental on-line para todo o Brasil.">
+    <title>Esllanny Farias | Psicóloga Infantil</title>
+    <meta name="theme-color" content="#F9F5EF">
 
-    <!-- Google Fonts: Outfit -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!-- Prévia ao compartilhar o link (WhatsApp, Instagram, Facebook) -->
+    <!-- og:image precisa do endereço completo do site, ex: https://seudominio.com.br/img/logo.png -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Esllanny Farias | Psicóloga Infantil">
+    <meta property="og:description"
+        content="Um espaço seguro para crescer, sentir e florescer. Atendimento presencial em Praia Grande/SP e Orientação Parental on-line para todo o Brasil.">
+    <meta property="og:image" content="img/logo.png">
+
+    <!-- Dados estruturados para o Google (busca local) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Psychologist",
+        "name": "Esllanny Farias - Psicóloga Infantil",
+        "description": "Psicóloga Infantil (CRP 06/209440). Atendimento presencial em Praia Grande/SP e Orientação Parental on-line para todo o Brasil.",
+        "image": "img/perfil.jpg",
+        "logo": "img/logo.png",
+        "telephone": "+55-13-99608-9642",
+        "email": "esllannyfariaspsi@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Pres. Costa e Silva, 609 - Sala 503, Boqueirão",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "areaServed": ["Praia Grande", "Brasil"],
+        "sameAs": ["https://www.instagram.com/psi.esllannyfarias/"]
+    }
+    </script>
+
+    <!-- Google Fonts: Cormorant Garamond (títulos, como o nome na logo) + Nunito Sans (textos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Bootstrap & Icons -->
@@ -19,38 +56,40 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg glass-nav sticky-top py-3">
+    <nav class="navbar navbar-expand-xl glass-nav sticky-top py-2">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#" data-aos="fade-down">
-                <div class="logo-circle-custom">
-                    EF
-                </div>
-                <div class="lh-1">
-                    <span class="fw-bold d-block mb-0 text-dark" style="font-size: 1.2rem;">Esllanny Farias</span>
-                    <small class="text-marrom-destaque fw-bold" style="font-size: 11px; letter-spacing: 1px;">CRP
-                        06/209440</small>
+            <a class="navbar-brand d-flex align-items-center" href="#inicio">
+                <img src="img/logo-simbolo.png" alt="" class="brand-logo">
+                <div>
+                    <span class="brand-nome d-block">Esllanny Farias</span>
+                    <small class="brand-sub d-block mt-1">PSICÓLOGA INFANTIL · CRP 06/209440</small>
                 </div>
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="bi bi-list fs-1 text-marrom-destaque"></i>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+                <i class="bi bi-list fs-1 text-destaque"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center" data-aos="fade-down" data-aos-delay="100">
-                    <li class="nav-item"><a class="nav-link px-3" href="#inicio">Início</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#sobre">Sobre</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#proposito">Propósito</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#especialidades">Especialidades</a></li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a class="btn btn-marrom-vweb px-4 rounded-pill" href="https://wa.me/5513996089642">
+                    <li class="nav-item"><a class="nav-link px-3" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#atendimento">Atendimento</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#como-chegar">Como Chegar</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#faq">Dúvidas</a></li>
+                    <li class="nav-item ms-xl-3 mt-3 mt-xl-0 mb-2 mb-xl-0">
+                        <a class="btn btn-marca px-4 rounded-pill"
+                            href="https://wa.me/5513996089642?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+                            target="_blank" rel="noopener">
                             Agendar Consulta
                         </a>
                     </li>
@@ -63,54 +102,122 @@
         <header id="inicio" class="pt-4 pb-5 overflow-hidden section-sand">
             <div class="container pt-2 pb-lg-5">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="hero-content">
                         <div class="badge rounded-pill badge-custom mb-4 d-inline-flex align-items-center">
-                            <i class="bi bi-stars me-2 fs-6"></i>
+                            <i class="bi bi-flower1 me-2 fs-6"></i>
                             Psicologia Infanto-Juvenil & ABA
                         </div>
-                        <h1 class="display-3 fw-bolder text-dark mb-4" style="line-height: 1.15;">
-                            Ética, Amor e <span class="text-marrom-gradient">Ciência</span>
-                            no Desenvolvimento.
+                        <h1 class="display-3 text-dark mb-4" style="line-height: 1.1;">
+                            Ética, Amor e <span class="text-gradient-marca">Ciência</span> no Desenvolvimento.
                         </h1>
-                        <p class="lead text-muted mb-5 fs-5" style="max-width: 90%;">
-                            Ajudando crianças a alcançarem seu potencial máximo através de intervenções baseadas em
-                            evidências e um olhar profundamente humanizado.
+                        <p class="lead text-muted mb-4 fs-5" style="max-width: 90%;">
+                            Promovendo o desenvolvimento, a autonomia e a qualidade de vida de crianças e adolescentes por meio de intervenções baseadas em evidências e de um olhar profundamente humanizado.
                         </p>
+                        <div class="d-flex flex-wrap gap-3 mb-4 text-muted" style="font-weight: 600;">
+                            <span><i class="bi bi-geo-alt-fill me-1" style="color: var(--terracota);"></i> Presencial em Praia Grande/SP</span>
+                            <span><i class="bi bi-laptop me-1" style="color: var(--azul-escuro);"></i> On-line para todo o Brasil</span>
+                        </div>
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="https://wa.me/5513996089642" class="btn btn-marrom-vweb btn-lg px-5 rounded-pill">
-                                Falar com Especialista <i class="bi bi-arrow-right ms-2"></i>
+                            <a href="https://wa.me/5513996089642?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+                                class="btn btn-marca btn-lg px-5 rounded-pill" target="_blank" rel="noopener">
+                                Falar com a Psicóloga <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                            <a href="https://www.instagram.com/psi.esllannyfarias/"
+                                class="btn btn-outline-marca btn-lg px-4 rounded-pill" target="_blank" rel="noopener">
+                                <i class="bi bi-instagram me-2"></i> Instagram
                             </a>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="200">
-                        <div class="hero-img-container">
-                            <div class="hero-shape"></div>
-                            <img src="img/perfil.jpg.jpeg" alt="Dra. Esllanny Farias" class="hero-img">
-                        </div>
+                    <div class="hero-brand">
+                        <img src="img/logo.png" alt="Esllanny Farias — Psicóloga Infantil" decoding="async" fetchpriority="high">
                     </div>
                 </div>
             </div>
         </header>
 
         <a href="https://wa.me/5513996089642?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
-            class="whatsapp-float" aria-label="Falar com Esllanny no WhatsApp" target="_blank" data-aos="zoom-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone do WhatsApp">
+            class="whatsapp-float" aria-label="Falar com Esllanny no WhatsApp" target="_blank" rel="noopener"
+           >
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
         </a>
 
-        <section id="especialidades" class="py-4 section-white">
+        <section id="proposito" class="py-5 section-white">
             <div class="container py-4">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="text-marrom-destaque fw-bold text-uppercase"
-                        style="letter-spacing: 2px; font-size: 0.9rem;">Áreas de Atuação</span>
+                <div class="row align-items-center g-5">
+                    <div class="col-12 proposito-conteudo mx-auto">
+                        <span class="eyebrow eyebrow-linha">Meu Propósito</span>
+                        <h2 class="display-5 mt-2 mb-4">Um espaço seguro para <span
+                                class="text-gradient-marca">crescer, sentir e florescer.</span></h2>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">
+                            Cada atendimento é pensado para oferecer acolhimento emocional, construir vínculos de
+                            confiança e promover o desenvolvimento saudável das crianças, com cuidado, segurança e
+                            profissionalismo para elas e para suas famílias.
+                        </p>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="elemento accent-terracota">
+                                    <div class="icon-highlight"><i class="bi bi-house-heart-fill"></i></div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Segurança e acolhimento</h5>
+                                        <p class="small mb-0" style="line-height: 1.6;">Um ambiente protegido para
+                                            expressar sentimentos e enfrentar desafios sem medo de julgamentos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="elemento accent-azul">
+                                    <div class="icon-highlight"><i class="bi bi-people-fill"></i></div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Vínculo e confiança</h5>
+                                        <p class="small mb-0" style="line-height: 1.6;">O encontro entre cuidado e
+                                            desenvolvimento: apoio e orientação para cada descoberta da criança.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="elemento accent-salvia">
+                                    <div class="icon-highlight"><i class="bi bi-flower2"></i></div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Crescimento e evolução</h5>
+                                        <p class="small mb-0" style="line-height: 1.6;">Como uma planta, cada criança
+                                            tem seu próprio ritmo e precisa de estímulos, compreensão e cuidado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="elemento accent-dourado">
+                                    <div class="icon-highlight"><i class="bi bi-heart-fill"></i></div>
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Afeto e sensibilidade</h5>
+                                        <p class="small mb-0" style="line-height: 1.6;">Empatia, escuta e respeito às
+                                            emoções, com ética e atenção à individualidade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="conceito-frase mb-0">
+                            Acolher cada criança em sua individualidade e respeitar seu tempo de desenvolvimento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="especialidades" class="py-4 section-sand">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <span class="eyebrow eyebrow-linha">Áreas de Atuação</span>
                     <h2 class="display-5 fw-bolder mt-2">Especialidades Clínicas</h2>
                     <p class="text-muted lead mx-auto" style="max-width: 600px;">Intervenções terapêuticas comprovadas e
                         focadas no desenvolvimento integral do paciente.</p>
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card h-100 border-0 p-4 text-center px-4 py-5">
+                    <div class="col-md-4">
+                        <div class="card accent-azul h-100 border-0 p-4 text-center px-4 py-5">
                             <div class="icon-highlight mb-4">
                                 <i class="bi bi-puzzle-fill"></i>
                             </div>
@@ -119,7 +226,7 @@
                                 <p class="text-muted mb-0">Análise do Comportamento Aplicada voltada para o Transtorno
                                     do Espectro Autista (TEA), com metodologias atestadas.</p>
                                 <button type="button"
-                                    class="btn btn-outline-marrom-vweb mt-4 rounded-pill btn-sm fw-bold px-4 py-2"
+                                    class="btn btn-outline-marca mt-4 rounded-pill btn-sm fw-bold px-4 py-2"
                                     data-bs-toggle="modal" data-bs-target="#modalAba">
                                     Entender Método
                                 </button>
@@ -127,8 +234,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card h-100 border-0 p-4 text-center px-4 py-5">
+                    <div class="col-md-4">
+                        <div class="card accent-salvia h-100 border-0 p-4 text-center px-4 py-5">
                             <div class="icon-highlight mb-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
@@ -145,7 +252,7 @@
                                 <p class="text-muted mb-0">Avaliação detalhada e intervenção estratégica das funções
                                     cognitivas, emocionais e comportamentais.</p>
                                 <button type="button"
-                                    class="btn btn-outline-marrom-vweb mt-4 rounded-pill btn-sm fw-bold px-4 py-2"
+                                    class="btn btn-outline-marca mt-4 rounded-pill btn-sm fw-bold px-4 py-2"
                                     data-bs-toggle="modal" data-bs-target="#modalNeuro">
                                     Entender Método
                                 </button>
@@ -153,8 +260,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card h-100 border-0 p-4 text-center px-4 py-5">
+                    <div class="col-md-4">
+                        <div class="card accent-dourado h-100 border-0 p-4 text-center px-4 py-5">
                             <div class="icon-highlight mb-4">
                                 <i class="bi bi-people-fill"></i>
                             </div>
@@ -163,7 +270,7 @@
                                 <p class="text-muted mb-0">Treinamento e suporte estruturado para as famílias, focando
                                     no manejo comportamental no ambiente diário.</p>
                                 <button type="button"
-                                    class="btn btn-outline-marrom-vweb mt-4 rounded-pill btn-sm fw-bold px-4 py-2"
+                                    class="btn btn-outline-marca mt-4 rounded-pill btn-sm fw-bold px-4 py-2"
                                     data-bs-toggle="modal" data-bs-target="#modalParental">
                                     Entender Método
                                 </button>
@@ -174,13 +281,13 @@
             </div>
         </section>
 
-        <section id="sobre" class="py-4 section-sand">
+        <section id="sobre" class="py-4 section-white">
             <div class="container py-4">
                 <div class="row align-items-center">
-                    <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
-                        <span class="text-marrom-destaque fw-bold text-uppercase"
-                            style="letter-spacing: 2px; font-size: 0.9rem;">Quem Sou</span>
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <span class="eyebrow eyebrow-linha">Quem Sou</span>
                         <h2 class="display-5 fw-bolder mt-2 mb-4">Sobre a Profissional</h2>
+                        <img src="img/perfil.jpg" alt="Esllanny Farias, psicóloga infantil" class="sobre-foto mb-4" loading="lazy" decoding="async">
                         <p class="text-muted lead pb-2" style="font-size: 1.1rem; line-height: 1.8;">
                             Sou psicóloga com atuação em neurodesenvolvimento infantil desde 2022. Meu trabalho é guiado pela integração entre <strong>ciência, sensibilidade clínica e afeto</strong>. 
                             <br><br>
@@ -192,22 +299,22 @@
                             <h3 class="fw-bold mb-4 text-dark d-flex align-items-center">
                                 Formação Escolar
                             </h3>
-                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                            <div class="timeline-item">
                                 <h4 class="fw-bold mb-1 text-dark fs-5">Psicóloga Formada</h4>
                                 <p class="mb-0 text-muted">Universidade Paulista (UNIP)</p>
                             </div>
                             
-                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="timeline-item">
                                 <h4 class="fw-bold mb-1 text-dark fs-5">Pós-Graduada</h4>
                                 <p class="mb-0 text-muted">Análise do Comportamento Aplicada</p>
                             </div>
                             
-                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+                            <div class="timeline-item">
                                 <h4 class="fw-bold mb-1 text-dark fs-5">Pós-Graduanda</h4>
                                 <p class="mb-0 text-muted">Neuropsicologia - Universidade Federal de São Paulo (UNIFESP)</p>
                             </div>
                             
-                            <div class="timeline-item border-0 pb-0" data-aos="fade-left" data-aos-delay="400">
+                            <div class="timeline-item border-0 pb-0">
                                 <h4 class="fw-bold mb-1 text-dark fs-5">Cursos de Aperfeiçoamento</h4>
                                 <p class="mb-0 text-muted mt-2" style="font-size: 0.95rem; line-height: 1.6;">
                                     Transtorno do Espectro Autista, Transtorno Opositor Desafiador, Gestão de Comportamentos Agressivos e Inapropriados, Intervenção Precoce, Habilidades Sociais na Infância, Orientação Parental e Protocolos Avaliativos.
@@ -219,59 +326,58 @@
             </div>
         </section>
 
-        <section id="experiencia" class="py-4 section-white">
+        <section id="experiencia" class="py-4 section-sand">
             <div class="container py-4">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="text-marrom-destaque fw-bold text-uppercase"
-                        style="letter-spacing: 2px; font-size: 0.9rem;">Conheça minha</span>
+                <div class="text-center mb-5">
+                    <span class="eyebrow eyebrow-linha">Conheça minha</span>
                     <h2 class="display-5 fw-bolder mt-2">Atuação Profissional</h2>
                     <p class="text-muted lead mx-auto" style="max-width: 650px;">Um trabalho focado no desenvolvimento integral e na transformação do dia a dia familiar, respeitando a neurodiversidade.</p>
                 </div>
 
                 <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card h-100 border-0 p-4 rounded-4 text-center" style="background-color: var(--sand-bg);">
-                            <div class="mb-3"><i class="bi bi-clipboard2-pulse fs-1 text-marrom-destaque"></i></div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-atuacao accent-terracota h-100 border-0 p-4 rounded-4 text-center">
+                            <div class="mb-3"><i class="bi bi-clipboard2-pulse fs-1"></i></div>
                             <h5 class="fw-bold text-dark">Avaliações do Desenvolvimento</h5>
                             <p class="text-muted mb-0 small" style="line-height: 1.6;">Realizadas por meio de protocolos padronizados, observações clínicas criteriosas e entrevistas com os pais.</p>
                         </div>
                     </div>
                     
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card h-100 border-0 p-4 rounded-4 text-center" style="background-color: var(--sand-bg);">
-                            <div class="mb-3"><i class="bi bi-diagram-3 fs-1 text-marrom-destaque"></i></div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-atuacao accent-azul h-100 border-0 p-4 rounded-4 text-center">
+                            <div class="mb-3"><i class="bi bi-diagram-3 fs-1"></i></div>
                             <h5 class="fw-bold text-dark">Planos Terapêuticos</h5>
                             <p class="text-muted mb-0 small" style="line-height: 1.6;">Programas altamente individualizados, baseados nas necessidades únicas de cada criança e adolescente.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card h-100 border-0 p-4 rounded-4 text-center" style="background-color: var(--sand-bg);">
-                            <div class="mb-3"><i class="bi bi-lightning-charge fs-1 text-marrom-destaque"></i></div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-atuacao accent-salvia h-100 border-0 p-4 rounded-4 text-center">
+                            <div class="mb-3"><i class="bi bi-lightning-charge fs-1"></i></div>
                             <h5 class="fw-bold text-dark">Estimulação de Habilidades</h5>
                             <p class="text-muted mb-0 small" style="line-height: 1.6;">Desenvolvimento ativo de habilidades emocionais, cognitivas, sociais, comunicativas e adaptativas.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card h-100 border-0 p-4 rounded-4 text-center" style="background-color: var(--sand-bg);">
-                            <div class="mb-3"><i class="bi bi-shield-check fs-1 text-marrom-destaque"></i></div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-atuacao accent-dourado h-100 border-0 p-4 rounded-4 text-center">
+                            <div class="mb-3"><i class="bi bi-shield-check fs-1"></i></div>
                             <h5 class="fw-bold text-dark">Autorregulação</h5>
                             <p class="text-muted mb-0 small" style="line-height: 1.6;">Desenvolvimento de estratégias viáveis de autorregulação emocional para auxiliar comportamentos desafiadores.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card h-100 border-0 p-4 rounded-4 text-center" style="background-color: var(--sand-bg);">
-                            <div class="mb-3"><i class="bi bi-house-heart fs-1 text-marrom-destaque"></i></div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-atuacao accent-terracota h-100 border-0 p-4 rounded-4 text-center">
+                            <div class="mb-3"><i class="bi bi-house-heart fs-1"></i></div>
                             <h5 class="fw-bold text-dark">Orientações Sistêmicas</h5>
                             <p class="text-muted mb-0 small" style="line-height: 1.6;">Fornecimento de orientações sistêmicas ativas com atuações parentais e escolares.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                        <div class="card h-100 border-0 p-4 rounded-4 text-center" style="background-color: var(--sand-bg);">
-                            <div class="mb-3"><i class="bi bi-people fs-1 text-marrom-destaque"></i></div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card card-atuacao accent-azul h-100 border-0 p-4 rounded-4 text-center">
+                            <div class="mb-3"><i class="bi bi-people fs-1"></i></div>
                             <h5 class="fw-bold text-dark">Equipe Multidisciplinar</h5>
                             <p class="text-muted mb-0 small" style="line-height: 1.6;">Trabalho colaborativo e comunicação constante com todos os outros profissionais envoltos na vida da criança.</p>
                         </div>
@@ -280,24 +386,150 @@
             </div>
         </section>
 
-        <section id="faq" class="py-4 section-white border-top border-light">
+        <section id="atendimento" class="py-4 section-white">
             <div class="container py-4">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="text-marrom-destaque fw-bold text-uppercase"
-                        style="letter-spacing: 2px; font-size: 0.9rem;">Dúvidas</span>
+                <div class="text-center mb-5">
+                    <span class="eyebrow eyebrow-linha">Como posso te ajudar</span>
+                    <h2 class="display-5 fw-bolder mt-2">Formas de Atendimento</h2>
+                    <p class="text-muted lead mx-auto" style="max-width: 650px;">Nem sempre é fácil perceber quando uma
+                        dificuldade faz parte do desenvolvimento esperado e quando ela merece uma atenção especializada.
+                        Estou aqui para caminhar ao lado da sua família nessa jornada.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card card-presencial accent-terracota h-100 border-0 p-4 p-lg-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-highlight m-0 me-3 flex-shrink-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div>
+                                    <span class="badge rounded-pill badge-custom mb-2">Presencial · Praia Grande/SP</span>
+                                    <h4 class="fw-bold mb-0 text-dark">Atendimento Psicológico Infantil</h4>
+                                </div>
+                            </div>
+                            <p class="text-muted">Para quem busca um acompanhamento especializado para o filho, com
+                                intervenções individualizadas e orientação para toda a família.</p>
+                            <ul class="list-unstyled text-muted mb-4">
+                                <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill icone-accent me-2 mt-1"></i>
+                                    Análise do Comportamento Aplicada (ABA)</li>
+                                <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill icone-accent me-2 mt-1"></i>
+                                    Desenvolvimento cognitivo, emocional e comportamental</li>
+                                <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill icone-accent me-2 mt-1"></i>
+                                    Orientação para toda a família</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="https://wa.me/5513996089642?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20presencial%20em%20Praia%20Grande."
+                                    class="btn btn-marca rounded-pill px-4" target="_blank">
+                                    Agendar Presencial <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card card-online accent-azul h-100 border-0 p-4 p-lg-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-highlight m-0 me-3 flex-shrink-0">
+                                    <i class="bi bi-laptop"></i>
+                                </div>
+                                <div>
+                                    <span class="badge rounded-pill badge-custom mb-2">On-line · Todo o Brasil</span>
+                                    <h4 class="fw-bold mb-0 text-dark">Orientação Parental</h4>
+                                </div>
+                            </div>
+                            <p class="text-muted">Se você deseja entender como estimular seu filho em casa de forma
+                                individualizada, mas não mora em Praia Grande/SP, também posso te ajudar!</p>
+                            <ul class="list-unstyled text-muted mb-4">
+                                <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill icone-accent me-2 mt-1"></i>
+                                    Estratégias personalizadas para a rotina da sua casa</li>
+                                <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill icone-accent me-2 mt-1"></i>
+                                    Manejo de comportamentos desafiadores</li>
+                                <li class="mb-2 d-flex"><i class="bi bi-check-circle-fill icone-accent me-2 mt-1"></i>
+                                    Atendimento de onde você estiver</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="https://wa.me/5513996089642?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20orientação%20parental%20on-line."
+                                    class="btn btn-marca rounded-pill px-4" target="_blank">
+                                    Agendar On-line <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="como-chegar" class="py-4 section-sand">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <span class="eyebrow eyebrow-linha">Atendimento Presencial</span>
+                    <h2 class="display-5 fw-bolder mt-2">Como Chegar</h2>
+                    <p class="text-muted lead mx-auto" style="max-width: 650px;">Consultório localizado no bairro
+                        Boqueirão, em Praia Grande/SP.</p>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-5">
+                        <div class="card h-100 border-0 p-4 p-lg-5">
+                            <div class="d-flex mb-4">
+                                <div class="icon-highlight m-0 me-3 flex-shrink-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold mb-2 text-dark">Endereço</h4>
+                                    <address class="text-muted mb-0" style="line-height: 1.7;">
+                                        Av. Pres. Costa e Silva, 609 – Sala 503<br>
+                                        Boqueirão, Praia Grande – SP
+                                    </address>
+                                </div>
+                            </div>
+                            <p class="text-muted small mb-4">
+                                <i class="bi bi-calendar-check text-destaque me-2"></i>
+                                Atendimento com horário agendado. Entre em contato antes da sua visita.
+                            </p>
+                            <div class="d-flex flex-wrap gap-3 mt-auto">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Pres.+Costa+e+Silva,+609,+Boqueir%C3%A3o,+Praia+Grande+-+SP"
+                                    class="btn btn-marca rounded-pill px-4" target="_blank" rel="noopener">
+                                    <i class="bi bi-google me-2"></i> Google Maps
+                                </a>
+                                <a href="https://waze.com/ul?q=Av.%20Pres.%20Costa%20e%20Silva%2C%20609%2C%20Praia%20Grande%20-%20SP&navigate=yes"
+                                    class="btn btn-outline-marca rounded-pill px-4" target="_blank" rel="noopener">
+                                    <i class="bi bi-sign-turn-right-fill me-2"></i> Waze
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps?q=Av.+Pres.+Costa+e+Silva,+609,+Boqueir%C3%A3o,+Praia+Grande+-+SP&output=embed"
+                                title="Mapa do consultório de Esllanny Farias em Praia Grande" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-4 section-white">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <span class="eyebrow eyebrow-linha">Dúvidas</span>
                     <h2 class="display-5 fw-bolder mt-2">Perguntas Frequentes</h2>
                     <p class="text-muted lead mx-auto" style="max-width: 650px;">Esclarecimentos rápidos sobre o formato
                         de atendimento e atuações clínicas.</p>
                 </div>
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-8">
                         <div class="accordion accordion-flush custom-accordion" id="accordionFaq">
                             <div class="accordion-item border mb-3 rounded-4 shadow-sm overflow-hidden">
                                 <h2 class="accordion-header" id="faq1">
                                     <button class="accordion-button collapsed fw-bold text-dark" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse1">
-                                        <i class="bi bi-question-circle-fill text-marrom-destaque me-3"></i> Você
+                                        <i class="bi bi-question-circle-fill text-destaque me-3"></i> Você
                                         realiza Acompanhamento Terapêutico (AT) escolar ou domiciliar?
                                     </button>
                                 </h2>
@@ -315,16 +547,53 @@
                                 <h2 class="accordion-header" id="faq2">
                                     <button class="accordion-button collapsed fw-bold text-dark" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse2">
-                                        <i class="bi bi-laptop text-marrom-destaque me-3"></i> O atendimento clínico
+                                        <i class="bi bi-laptop text-destaque me-3"></i> O atendimento clínico
                                         on-line tem a mesma eficácia?
                                     </button>
                                 </h2>
                                 <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
                                     <div class="accordion-body text-muted border-top border-light px-4">
-                                        Sim, especialmente paras as sessões de suporte, análise comportamental verbal e
+                                        Sim, especialmente para as sessões de suporte, análise comportamental verbal e
                                         orientação parental (onde focamos nos cuidadores). As avaliações diretas do
                                         indivíduo (neuropsicologia ou aplicação naturalística) costumam ser discutidas
                                         de forma personalizada.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item border mb-3 rounded-4 shadow-sm overflow-hidden">
+                                <h2 class="accordion-header" id="faq3">
+                                    <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                        <i class="bi bi-house-heart text-destaque me-3"></i> Não moro em Praia
+                                        Grande. Como funciona a orientação parental on-line?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                                    <div class="accordion-body text-muted border-top border-light px-4">
+                                        Os encontros acontecem por videochamada, com os pais e cuidadores, de qualquer
+                                        lugar do Brasil. Juntos, entendemos a rotina da família e construímos
+                                        estratégias individualizadas para estimular o desenvolvimento da criança e lidar
+                                        com comportamentos desafiadores no dia a dia, em casa.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item border mb-3 rounded-4 shadow-sm overflow-hidden">
+                                <h2 class="accordion-header" id="faq4">
+                                    <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                        <i class="bi bi-search-heart text-destaque me-3"></i> Como saber se meu
+                                        filho precisa de acompanhamento?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                                    <div class="accordion-body text-muted border-top border-light px-4">
+                                        Nem sempre é fácil perceber quando uma dificuldade faz parte do desenvolvimento
+                                        esperado e quando ela merece uma atenção especializada. Se você tem dúvidas
+                                        sobre a fala, o comportamento, a interação social ou a aprendizagem do seu
+                                        filho, uma conversa inicial ajuda a entender o momento dele e o melhor caminho
+                                        para a família.
                                     </div>
                                 </div>
                             </div>
@@ -340,7 +609,7 @@
                 <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
                     <div class="modal-header border-0 pb-0 px-4 pt-4">
                         <h4 class="modal-title fw-bold text-dark d-flex align-items-center">
-                            <div class="bg-soft-marrom text-marrom-destaque rounded-circle p-2 me-3 d-flex align-items-center justify-content-center"
+                            <div class="bg-soft-marca text-destaque rounded-circle p-2 me-3 d-flex align-items-center justify-content-center"
                                 style="width: 45px; height: 45px;"><i class="bi bi-puzzle-fill fs-5"></i></div> Ciência
                             ABA
                         </h4>
@@ -364,7 +633,7 @@
                 <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
                     <div class="modal-header border-0 pb-0 px-4 pt-4">
                         <h4 class="modal-title fw-bold text-dark d-flex align-items-center">
-                            <div class="bg-soft-marrom text-marrom-destaque rounded-circle p-2 me-3 d-flex align-items-center justify-content-center"
+                            <div class="bg-soft-marca text-destaque rounded-circle p-2 me-3 d-flex align-items-center justify-content-center"
                                 style="width: 45px; height: 45px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -396,7 +665,7 @@
                 <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
                     <div class="modal-header border-0 pb-0 px-4 pt-4">
                         <h4 class="modal-title fw-bold text-dark d-flex align-items-center">
-                            <div class="bg-soft-marrom text-marrom-destaque rounded-circle p-2 me-3 d-flex align-items-center justify-content-center"
+                            <div class="bg-soft-marca text-destaque rounded-circle p-2 me-3 d-flex align-items-center justify-content-center"
                                 style="width: 45px; height: 45px;"><i class="bi bi-people-fill fs-5"></i></div>
                             Orientação Parental
                         </h4>
@@ -416,46 +685,67 @@
 
     </main>
 
-    <footer id="contato" class="pt-5 pb-4" style="background-color: #1a1510; color: #e9e6e1;">
+    <footer id="contato" class="pt-5 pb-4 footer-marca">
         <div class="container pt-3">
             <div class="row g-5 mb-5">
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center mb-4">
-                        <div class="logo-circle-custom me-3">
-                            EF
+                        <div class="footer-logo"><img src="img/logo-simbolo.png" alt=""></div>
+                        <div>
+                            <h4 class="mb-0 text-white" style="font-size: 1.7rem;">Esllanny Farias</h4>
+                            <small class="text-white-50" style="letter-spacing: 2px;">PSICÓLOGA INFANTIL</small>
                         </div>
-                        <h4 class="fw-bold mb-0 text-white">ESLLANNY FARIAS</h4>
                     </div>
                     <p class="text-white-50 lh-lg pe-lg-4">
-                        Psicóloga Clínica (CRP 06/209440) dedicada ao desenvolvimento infanto-juvenil, integrando
-                        empatia à eficácia da ciência ABA.
+                        Um espaço seguro para crescer, sentir e florescer. Psicóloga (CRP 06/209440) dedicada ao
+                        desenvolvimento infanto-juvenil, integrando afeto, ética e ciência.
                     </p>
                 </div>
 
                 <div class="col-lg-4">
                     <h5 class="fw-bold text-white mb-4">Navegação</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#sobre" class="text-white-50 text-decoration-none hover-link">Sobre a
-                                Profissional</a></li>
                         <li class="mb-3"><a href="#especialidades"
                                 class="text-white-50 text-decoration-none hover-link">Especialidades Clínicas</a></li>
+                        <li class="mb-3"><a href="#sobre" class="text-white-50 text-decoration-none hover-link">Sobre a
+                                Profissional</a></li>
                         <li class="mb-3"><a href="#experiencia"
-                                class="text-white-50 text-decoration-none hover-link">Trajetória Profissional</a></li>
+                                class="text-white-50 text-decoration-none hover-link">Atuação Profissional</a></li>
+                        <li class="mb-3"><a href="#atendimento"
+                                class="text-white-50 text-decoration-none hover-link">Formas de Atendimento</a></li>
+                        <li class="mb-3"><a href="#como-chegar"
+                                class="text-white-50 text-decoration-none hover-link">Como Chegar</a></li>
+                        <li class="mb-3"><a href="#faq"
+                                class="text-white-50 text-decoration-none hover-link">Perguntas Frequentes</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4">
                     <h5 class="fw-bold text-white mb-4">Contatos Clínicos</h5>
                     <ul class="list-unstyled text-white-50">
-                        <li class="mb-3 d-flex align-items-center">
-                            <i class="bi bi-geo-alt-fill text-marrom-destaque me-3 fs-5"></i> Praia Grande, São Paulo
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-geo-alt-fill text-destaque me-3 fs-5"></i>
+                            <a href="#como-chegar" class="text-white-50 text-decoration-none hover-link">
+                                Av. Pres. Costa e Silva, 609 – Sala 503<br>Boqueirão, Praia Grande – SP
+                            </a>
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="bi bi-envelope-fill text-marrom-destaque me-3 fs-5"></i>
-                            esllannyfariaspsi@gmail.com
+                            <i class="bi bi-laptop text-destaque me-3 fs-5"></i> On-line para todo o Brasil
                         </li>
                         <li class="mb-3 d-flex align-items-center">
-                            <i class="bi bi-whatsapp text-marrom-destaque me-3 fs-5"></i> (13) 99608-9642
+                            <i class="bi bi-envelope-fill text-destaque me-3 fs-5"></i>
+                            <a href="mailto:esllannyfariaspsi@gmail.com"
+                                class="text-white-50 text-decoration-none hover-link">esllannyfariaspsi@gmail.com</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-whatsapp text-destaque me-3 fs-5"></i>
+                            <a href="https://wa.me/5513996089642" target="_blank" rel="noopener"
+                                class="text-white-50 text-decoration-none hover-link">(13) 99608-9642</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-instagram text-destaque me-3 fs-5"></i>
+                            <a href="https://www.instagram.com/psi.esllannyfarias/" target="_blank" rel="noopener"
+                                class="text-white-50 text-decoration-none hover-link">@psi.esllannyfarias</a>
                         </li>
                     </ul>
                 </div>
@@ -468,7 +758,7 @@
                     &copy; 2026 Esllanny Farias. Todos os direitos reservados.
                 </p>
                 <p class="fw-light text-white-50 mb-0" style="font-size: 0.8rem; letter-spacing: 1px;">
-                    Feito com <i class="bi bi-heart-fill text-marrom-destaque mx-1"></i> por <span
+                    Feito com <i class="bi bi-heart-fill text-destaque mx-1"></i> por <span
                         class="text-white fw-bold">João Ewerton</span>
                 </p>
             </div>
@@ -480,10 +770,12 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <!-- AOS Animation Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Lógica dinâmica (AOS e Interações de Scroll) -->
-    <script src="server.js"></script>
+    
+    
+    <!-- Navegação e interações -->
+    <script src="main.js"></script>
 </body>
 
 </html>
+
+
