@@ -929,16 +929,16 @@ h2.display-5 { font-size: clamp(2.7rem, 4.6vw, 4.4rem); line-height: 1.04; lette
 
 /* Texto e símbolo lado a lado na abertura. */
 #inicio::before { content: none; }
-#inicio > .container > .row { align-items: center !important; }
+#inicio > .container > .row { align-items: center !important; column-gap: 7%; }
 #inicio .hero-content {
-    width: 58%;
+    width: 51%;
     min-height: 680px;
-    padding: 72px 32px;
+    padding: 72px 12px;
     align-items: flex-start;
     text-align: left;
 }
 #inicio .badge-custom { align-self: flex-start; }
-#inicio h1 { font-size: clamp(3rem, 4.8vw, 4.8rem); max-width: 100%; }
+#inicio h1 { font-size: clamp(2.8rem, 4vw, 4.1rem); max-width: 100%; }
 #inicio .hero-content > .d-flex { justify-content: flex-start; }
 #inicio .hero-brand { width: 42%; padding: 40px 24px; }
 #inicio .hero-brand img { display: block; width: 100%; max-width: 480px; height: auto; margin: auto; mix-blend-mode: multiply; }
